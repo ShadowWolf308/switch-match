@@ -2,8 +2,8 @@
 
 import { defineConfig } from 'vite';
 
-export default defineConfig((e) => ({
-	publicDir: e.command == 'serve' ? 'public' : false,
+export default defineConfig((env) => ({
+	publicDir: env.command == 'serve' ? 'public' : false,
 	build: {
 		lib: {
 		entry: './lib/index.ts',
