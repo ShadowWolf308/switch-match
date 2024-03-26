@@ -5,13 +5,15 @@
 	"files": [
 		"dist"
 	],
-	"description": "A simple match function for JavaScript, similar to switch-case statements but in parallel using web workers.",
-	"main": "index.js",
+	"description": "A simple match function for JavaScript, similar to switch-case statements.",
+	"main": "./dist/switch-match.umd.cjs",
+	"module": "./dist/switch-match.js",
+	"types": "./dist/index.d.ts",
 	"scripts": {
 		"test": "vitest",
 		"coverage": "vitest run --coverage",
 		"dev": "vite",
-		"build": "rm -rf dist && tsc && vite build && tsup ./lib/index.ts --dts --dts-only",
+		"build": "tsc && vite build && tsup ./lib/index.ts --dts --dts-only",
 		"prepublishOnly": "pnpm run test --run && pnpm run build"
 	},
 	"exports": {
